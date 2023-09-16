@@ -1,0 +1,271 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #282727;
+    --secondary: aqua;
+    --txt: #fff;
+    --shadow: 0 5px 10px rgba(0, 0, 0, 0.65);
+}
+
+/* Global styles */
+body {
+    font-family: "Montserrat", sans-serif;
+    text-shadow: var(--shadow);
+    background-color: var(--primary);
+    color: var(--txt);
+    line-height: 1.5;
+}
+
+/* Header styles */
+header {
+    margin: 10px;
+    display: flex;
+    text-align: center;
+    background-color: black;
+    border-radius: 5px;
+    -shadow: var(--shadow);
+    overflow: hidden;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#HeadName {
+    font-size: 90px;
+}
+
+#HeadName:hover {
+    color: var(--secondary);
+    text-shadow: 0 4px 8px rgba(70, 238, 227, 0.478);
+}
+
+#Name {
+    display: flex;
+    flex-direction: column;
+}
+
+header div {
+    display: inline;
+    font-size: 3.5rem;
+}
+
+#imagecontainer img,
+.project img {
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+}
+
+header p {
+    font-size: 20px;
+}
+
+#imgdiv {
+    display: flex;
+}
+
+/* Navigation styles */
+nav {
+    box-shadow: var(--shadow);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 10px;
+    border-radius: 4px;
+    justify-content: center;
+    background-color: var(--primary);
+    padding: 12px 0px;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    padding: 5px 10px;
+    color: var(--txt);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: var(--shadow);
+}
+
+/* Sections common styles */
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+/* About section styles */
+#about h3 {
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+#about p {
+    margin-top: 15px;
+}
+
+#about {
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 30px;
+}
+
+/* Portfolio section styles */
+#projects {
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#projects h3 {
+    color: var(--secondary);
+    margin: 25px 0;
+    font-size: 1.5rem;
+}
+
+#projectgrp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.project {
+    width: calc(33.33% - 20px);
+    margin: 0;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: var(--shadow);
+    border-radius: 8px 8px 0 0;
+}
+
+.project p {
+    padding: 5px;
+    margin: 15px 20px;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow);
+}
+
+/* Contact section styles */
+#contact {
+    background-color: var(--primary);
+    color: var(--txt);
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+}
+
+#contact a {
+    color: var(--secondary);
+    text-decoration: none;
+    /* font-weight: bold; */
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+#contactdiv {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#contact input {
+    color: var(--secondary);
+    background-color: var(--primary);
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px;
+}
+
+#contactbtn {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+    padding: 5px 20px;
+    box-shadow: var(--shadow);
+}
+
+#contactbtn:hover {
+    color: var(--primary);
+    background-color: var(--secondary);
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    background-color: var(--primary);
+    font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #HeadName {
+        font-size: 40px;
+    }
+
+    header p {
+        font-size: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 30px;
+    }
+
+    #projects .project {
+        width: 100%;
+    }
+
+    #contact{
+        font-size: small;
+    }
+}
